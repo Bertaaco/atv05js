@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade Modo Dark</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: 0.5s; /* Deixa a transição de cores suave */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .painel {
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    button { padding: 10px 20px; cursor: pointer; font-size: 16px; }
+  </style>
+</head>
+<body id="meuCorpo">
+
+  <div class="painel" id="caixa">
+    <h1 id="titulo">Interatividade com JS</h1>
+    <p id="texto">Clique abaixo para alternar o visual da página.</p>
+
+    <button onclick="ativarModoEscuro()">Modo Dark</button>
+    <button onclick="ativarModoClaro()">Modo Light</button>
+  </div>
+
+  <script>
+    // Função para mudar para o modo escuro
+    function ativarModoEscuro() {
+      // Usa getElementById para acessar body e a div (Módulo 3 do PDF)
+      document.getElementById("meuCorpo").style.backgroundColor = "#2c3e50";
+      document.getElementById("caixa").style.borderColor = "#ecf0f1";
+      document.getElementById("titulo").style.color = "#ecf0f1";
+      document.getElementById("texto").style.color = "#bdc3c7";
+    }
+
+    // Função para voltar para o modo claro
+    function ativarModoClaro() {
+      document.getElementById("meuCorpo").style.backgroundColor = "white";
+      document.getElementById("caixa").style.borderColor = "#ccc";
+      document.getElementById("titulo").style.color = "black";
+      document.getElementById("texto").style.color = "black";
+    }
+  </script>
+
+</body>
+</html>
